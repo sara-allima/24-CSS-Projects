@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --search-border: #bbb;
+    --search-focus-border: #3a71ca;
+}
+.container {
+    margin: 2rem 2rem;
+    min-width: 20rem;  
+}
+.hide-label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+input {
+    width: 30%;
+    border: 1px solid var(--search-border);
+    border-radius: 3px;
+    padding: 0.5rem 0;
+    transition: all .2s;
+}
+
+input:focus {
+    border-color: var(--search-focus-border);
+    width: 100%;
+    outline: none;
+    box-shadow: 0 0 3px 1px var(--search-focus-border);
+}
+input:focus::placeholder {
+    color: transparent;
+}
